@@ -30,6 +30,8 @@ spring:
   jpa:
     open-in-view: false
     hibernate:
+      naming:
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
       ddl-auto: create
     properties:
       hibernate:
@@ -44,13 +46,13 @@ logging:
   level:
     root: info
     org.example.namelock: debug
-    com.zaxxer.hikari: debug
+    # com.zaxxer.hikari: debug
     # 트랜잭션 로그
     org.springframework.transaction: debug
     org.springframework.orm.jpa.JpaTransactionManager: debug
 #    org.springframework.transaction.interceptor: trace
 #    org.springframework.jdbc.datasource.DataSourceTransactionManager: trace
 #    org.springframework.orm.jpa.JpaTransactionManager: debug
-
-#    org.hibernate.SQL: debug
-#    org.hibernate.orm.jdbc.bind: trace
+    # 쿼리 로그
+    # org.hibernate.SQL: debug
+    # org.hibernate.orm.jdbc.bind: trace
