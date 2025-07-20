@@ -1,0 +1,6 @@
+1752989571527|56|statement|connection 97849|url jdbc:mysql://localhost:3306/coupon_example|SELECT GET_LOCK(?, ?)|SELECT GET_LOCK('lock:coupon:ABC123', 3)
+1752989571528|15|statement|connection 97937|url jdbc:mysql://localhost:3306/coupon_example|SELECT GET_LOCK(?, ?)|SELECT GET_LOCK('lock:coupon:ABC123', 3)
+1752989571527|72|statement|connection 97915|url jdbc:mysql://localhost:3306/coupon_example|SELECT GET_LOCK(?, ?)|SELECT GET_LOCK('lock:coupon:ABC123', 3)
+1752989571529|28|statement|connection 97931|url jdbc:mysql://localhost:3306/coupon_example|SELECT GET_LOCK(?, ?)|SELECT GET_LOCK('lock:coupon:ABC123', 3)
+1752989571530|13|rollback|connection 97807|url jdbc:mysql://localhost:3306/coupon_example||
+1752989571530|27|statement|connection 97933|url jdbc:mysql://localhost:3306/coupon_example|SELECT GET_LOCK(?, ?)|SELECT GET_LOCK('lock:coupon:ABC123', 3)

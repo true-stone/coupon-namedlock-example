@@ -1,0 +1,56 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: named-lock
+  datasource:
+    main:
+      url: jdbc:mysql://localhost:3306/coupon_example
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      username: root
+      password: root
+      hikari:
+        maximum-pool-size: 50
+        minimum-idle: 25
+        pool-name: main-pool
+        connection-test-query: SELECT 1
+
+    lock:
+      hikari:
+        jdbc-url: jdbc:mysql://localhost:3306/coupon_example
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: root
+        password: root
+        maximum-pool-size: 15
+        minimum-idle: 5
+        pool-name: lock-pool
+        connection-test-query: SELECT 1
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        use_sql_comments: true
+    defer-datasource-initialization: true
+
+  sql:
+    init:
+      mode: always
+
+logging:
+  level:
+    root: info
+    org.example.namelock: debug
+    com.zaxxer.hikari: debug
+    # 트랜잭션 로그
+    org.springframework.transaction: debug
+    org.springframework.orm.jpa.JpaTransactionManager: debug
+#    org.springframework.transaction.interceptor: trace
+#    org.springframework.jdbc.datasource.DataSourceTransactionManager: trace
+#    org.springframework.orm.jpa.JpaTransactionManager: debug
+
+#    org.hibernate.SQL: debug
+#    org.hibernate.orm.jdbc.bind: trace
