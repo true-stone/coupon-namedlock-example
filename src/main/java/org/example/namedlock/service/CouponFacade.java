@@ -1,8 +1,8 @@
-package org.example.namelock.service;
+package org.example.namedlock.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.namelock.repository.NamedLockRepository;
+import org.example.namedlock.repository.NamedLockRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 

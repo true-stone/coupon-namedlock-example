@@ -1,4 +1,4 @@
-package org.example.namelock.repository;
+package org.example.namedlock.repository;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;

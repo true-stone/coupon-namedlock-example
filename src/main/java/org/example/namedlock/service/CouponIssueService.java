@@ -1,11 +1,11 @@
-package org.example.namelock.service;
+package org.example.namedlock.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.namelock.entity.Coupon;
-import org.example.namelock.entity.CouponStock;
-import org.example.namelock.repository.CouponRepository;
-import org.example.namelock.repository.CouponStockRepository;
+import org.example.namedlock.entity.Coupon;
+import org.example.namedlock.entity.CouponStock;
+import org.example.namedlock.repository.CouponRepository;
+import org.example.namedlock.repository.CouponStockRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;

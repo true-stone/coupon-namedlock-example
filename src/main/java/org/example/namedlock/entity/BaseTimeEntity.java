@@ -1,4 +1,4 @@
-package org.example.namelock.entity;
+package org.example.namedlock.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

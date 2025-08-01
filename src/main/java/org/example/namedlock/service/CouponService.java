@@ -1,4 +1,4 @@
-package org.example.namelock.service;
+package org.example.namedlock.service;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

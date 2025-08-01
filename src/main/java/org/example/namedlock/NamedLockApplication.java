@@ -1,13 +1,13 @@
-package org.example.namelock;
+package org.example.namedlock;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class NameLockApplication {
+public class NamedLockApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(NameLockApplication.class, args);
+        SpringApplication.run(NamedLockApplication.class, args);
     }
 
 }

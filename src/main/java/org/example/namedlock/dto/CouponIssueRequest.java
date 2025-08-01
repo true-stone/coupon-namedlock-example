@@ -1,4 +1,4 @@
-package org.example.namelock.dto;
+package org.example.namedlock.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

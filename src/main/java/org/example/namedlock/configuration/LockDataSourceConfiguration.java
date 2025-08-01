@@ -1,4 +1,4 @@
-package org.example.namelock.configuration;
+package org.example.namedlock.configuration;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

@@ -1,9 +1,9 @@
-package org.example.namelock.service;
+package org.example.namedlock.service;
 
-import org.example.namelock.entity.CouponStock;
-import org.example.namelock.repository.CouponRepository;
-import org.example.namelock.repository.CouponStockRepository;
-import org.example.namelock.repository.NamedLockRepository;
+import org.example.namedlock.entity.CouponStock;
+import org.example.namedlock.repository.CouponRepository;
+import org.example.namedlock.repository.CouponStockRepository;
+import org.example.namedlock.repository.NamedLockRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
