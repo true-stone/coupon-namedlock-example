@@ -13,11 +13,11 @@ public class CouponService {
     private final LockFacade lockFacade;
     private final CouponIssueService couponIssueService;
 
-    public void download(Long userId, String couponCode) {
+    public void issueWithNamedLock(Long userId, String couponCode) {
         log.info("유저 ({}) 쿠폰코드 '{}' 쿠폰 다운로드 요청", userId, couponCode);
 
         String lockName = "coupon_stock:code:" + couponCode;
-        lockFacade.runWithLock(lockName, () -> couponIssueService.issueCoupon(userId, couponCode));
+        lockFacade.runWithLock(lockName, () -> couponIssueService.issue(userId, couponCode));
     }
 
 }

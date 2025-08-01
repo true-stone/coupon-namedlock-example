@@ -8,10 +8,16 @@ import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.annotations.Comment;
 
-@Slf4j
 @Entity
+@Table(
+    name = "coupon_stock",
+    indexes = {
+        @Index(name = "idx_coupon_code", columnList = "coupon_code")
+    }
+)
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Slf4j
 public class CouponStock extends BaseTimeEntity {
 
     @Id

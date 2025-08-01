@@ -17,7 +17,7 @@ public class CouponController {
     @PostMapping("/issue")
     public ResponseEntity<String> issue(
         @RequestBody @Valid CouponIssueRequest request) {
-        couponService.download(request.userId(), request.couponCode());
+        couponService.issueWithNamedLock(request.userId(), request.couponCode());
         return ResponseEntity.ok("쿠폰이 성공적으로 발급되었습니다.");
     }
 }
