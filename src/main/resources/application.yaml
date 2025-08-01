@@ -32,7 +32,7 @@ spring:
     hibernate:
       naming:
         implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl
-      ddl-auto: create
+      ddl-auto: update
     properties:
       hibernate:
         use_sql_comments: true
@@ -45,7 +45,7 @@ spring:
 logging:
   level:
     root: info
-    org.example.namelock: debug
+    org.example.namedlock: debug
     # com.zaxxer.hikari: debug
     # 트랜잭션 로그
     org.springframework.transaction: debug
