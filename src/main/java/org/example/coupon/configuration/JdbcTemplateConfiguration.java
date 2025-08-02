@@ -1,4 +1,4 @@
-package org.example.namedlock.configuration;
+package org.example.coupon.configuration;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;

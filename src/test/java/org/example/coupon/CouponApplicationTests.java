@@ -1,10 +1,10 @@
-package org.example.namedlock;
+package org.example.coupon;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class NamedLockApplicationTests {
+class CouponApplicationTests {
 
     @Test
     void contextLoads() {

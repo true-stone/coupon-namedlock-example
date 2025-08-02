@@ -1,4 +1,4 @@
-package org.example.namedlock.configuration;
+package org.example.coupon.configuration;
 
 import jakarta.persistence.EntityManagerFactory;
 import lombok.RequiredArgsConstructor;
@@ -21,13 +21,13 @@ import javax.sql.DataSource;
 
 import java.util.Map;
 
-import static org.example.namedlock.configuration.MainDataSourceConfiguration.MAIN_DATA_SOURCE;
+import static org.example.coupon.configuration.MainDataSourceConfiguration.MAIN_DATA_SOURCE;
 
 @Configuration
 @EnableJpaAuditing
 @EnableTransactionManagement
 @EnableJpaRepositories(
-    basePackages = "org.example.namedlock.repository"
+    basePackages = "org.example.coupon.repository"
 )
 @RequiredArgsConstructor
 public class JpaConfiguration {

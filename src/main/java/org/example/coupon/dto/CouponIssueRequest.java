@@ -1,4 +1,4 @@
-package org.example.namedlock.dto;
+package org.example.coupon.dto;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

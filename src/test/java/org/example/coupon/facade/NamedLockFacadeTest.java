@@ -1,4 +1,4 @@
-package org.example.namedlock.facade;
+package org.example.coupon.facade;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

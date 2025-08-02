@@ -1,4 +1,4 @@
-package org.example.namedlock.configuration;
+package org.example.coupon.configuration;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

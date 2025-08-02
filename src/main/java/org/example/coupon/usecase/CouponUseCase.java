@@ -1,9 +1,9 @@
-package org.example.namedlock.usecase;
+package org.example.coupon.usecase;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.example.namedlock.facade.NamedLockFacade;
-import org.example.namedlock.service.CouponIssueService;
+import org.example.coupon.facade.NamedLockFacade;
+import org.example.coupon.service.CouponIssueService;
 import org.springframework.stereotype.Service;
 
 @Slf4j

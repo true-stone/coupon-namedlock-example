@@ -1,9 +1,9 @@
-package org.example.namedlock.controller;
+package org.example.coupon.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.example.namedlock.dto.CouponIssueRequest;
-import org.example.namedlock.usecase.CouponUseCase;
+import org.example.coupon.dto.CouponIssueRequest;
+import org.example.coupon.usecase.CouponUseCase;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
