@@ -27,7 +27,7 @@ import static org.example.coupon.infrastructure.configuration.MainDataSourceConf
 @EnableJpaAuditing
 @EnableTransactionManagement
 @EnableJpaRepositories(
-    basePackages = "org.example.coupon.repository"
+    basePackages = "org.example.coupon.domain"
 )
 @RequiredArgsConstructor
 public class JpaConfiguration {
@@ -47,7 +47,7 @@ public class JpaConfiguration {
 
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan("org.example.coupon.entity");
+        em.setPackagesToScan("org.example.coupon.domain");
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         em.setJpaPropertyMap(properties);
         return em;
