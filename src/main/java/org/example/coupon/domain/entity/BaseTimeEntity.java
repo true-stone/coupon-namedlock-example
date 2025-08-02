@@ -1,4 +1,4 @@
-package org.example.coupon.entity;
+package org.example.coupon.domain.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;

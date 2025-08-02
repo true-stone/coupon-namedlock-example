@@ -1,9 +1,9 @@
-package org.example.coupon.controller;
+package org.example.coupon.presentation.controller;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.example.coupon.dto.CouponIssueRequest;
-import org.example.coupon.usecase.CouponUseCase;
+import org.example.coupon.presentation.request.CouponIssueRequest;
+import org.example.coupon.application.usecase.IssueCouponUseCase;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,12 +12,12 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/coupons")
 public class CouponController {
 
-    private final CouponUseCase couponUseCase;
+    private final IssueCouponUseCase issueCouponUseCase;
 
     @PostMapping("/issue")
     public ResponseEntity<String> issue(
         @RequestBody @Valid CouponIssueRequest request) {
-        couponUseCase.issueWithNamedLock(request.userId(), request.couponCode());
+        issueCouponUseCase.issueWithNamedLock(request.userId(), request.couponCode());
         return ResponseEntity.ok("쿠폰이 성공적으로 발급되었습니다.");
     }
 }

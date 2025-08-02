@@ -1,4 +1,4 @@
-package org.example.coupon.repository;
+package org.example.coupon.infrastructure.lock;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;

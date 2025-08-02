@@ -1,4 +1,4 @@
-package org.example.coupon.configuration;
+package org.example.coupon.infrastructure.configuration;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

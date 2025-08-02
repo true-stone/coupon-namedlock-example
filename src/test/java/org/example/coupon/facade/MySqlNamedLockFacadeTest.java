@@ -1,5 +1,6 @@
 package org.example.coupon.facade;
 
+import org.example.coupon.infrastructure.lock.MySqlNamedLockFacade;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,10 +13,10 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 @SpringBootTest
-class NamedLockFacadeTest {
+class MySqlNamedLockFacadeTest {
 
     @Autowired
-    private NamedLockFacade namedLockFacade;
+    private MySqlNamedLockFacade mySqlNamedLockFacade;
 
     @Test
     @DisplayName("이미 다른 스레드가 락을 점유 중일 때 락 획득 실패 예외가 발생해야 한다.")
@@ -26,7 +27,7 @@ class NamedLockFacadeTest {
         CountDownLatch releaseLatch = new CountDownLatch(1);
 
         Thread lockerThread = new Thread(() -> {
-            namedLockFacade.runWithLock(lockKey, () -> {
+            mySqlNamedLockFacade.runWithLock(lockKey, () -> {
                 try {
                     readyLatch.countDown(); // 락 획득 신호
                     releaseLatch.await();   // 해제 대기
@@ -41,7 +42,7 @@ class NamedLockFacadeTest {
 
         // when & then
         Exception exception = assertThrows(CannotAcquireLockException.class, () -> {
-            namedLockFacade.runWithLock(lockKey, () -> {
+            mySqlNamedLockFacade.runWithLock(lockKey, () -> {
                 // 이 블록은 실행되지 않아야 함
             });
         });

@@ -1,4 +1,4 @@
-package org.example.coupon.configuration;
+package org.example.coupon.infrastructure.configuration;
 
 import jakarta.persistence.EntityManagerFactory;
 import lombok.RequiredArgsConstructor;
@@ -21,7 +21,7 @@ import javax.sql.DataSource;
 
 import java.util.Map;
 
-import static org.example.coupon.configuration.MainDataSourceConfiguration.MAIN_DATA_SOURCE;
+import static org.example.coupon.infrastructure.configuration.MainDataSourceConfiguration.MAIN_DATA_SOURCE;
 
 @Configuration
 @EnableJpaAuditing

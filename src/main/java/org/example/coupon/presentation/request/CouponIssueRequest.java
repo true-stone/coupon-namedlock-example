@@ -1,4 +1,4 @@
-package org.example.coupon.dto;
+package org.example.coupon.presentation.request;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;

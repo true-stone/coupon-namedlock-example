@@ -1,9 +1,9 @@
 package org.example.coupon.service;
 
-import org.example.coupon.entity.CouponStock;
-import org.example.coupon.repository.CouponRepository;
-import org.example.coupon.repository.CouponStockRepository;
-import org.example.coupon.usecase.CouponUseCase;
+import org.example.coupon.domain.entity.CouponStock;
+import org.example.coupon.domain.repository.CouponRepository;
+import org.example.coupon.domain.repository.CouponStockRepository;
+import org.example.coupon.application.usecase.IssueCouponUseCase;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CouponIssueWithNamedLockTest {
 
     @Autowired
-    private CouponUseCase couponUseCase;
+    private IssueCouponUseCase issueCouponUseCase;
 
     @Autowired
     private CouponRepository couponRepository;
@@ -54,7 +54,7 @@ class CouponIssueWithNamedLockTest {
         Long userId = 1L;
 
         // when
-        couponUseCase.issueWithNamedLock(userId, COUPON_CODE);
+        issueCouponUseCase.issueWithNamedLock(userId, COUPON_CODE);
 
         // then
         CouponStock couponStock = couponStockRepository.findByCouponCode(COUPON_CODE).orElseThrow();
@@ -78,7 +78,7 @@ class CouponIssueWithNamedLockTest {
             long userId = i + 1;
             executor.submit(() -> {
                 try {
-                    couponUseCase.issueWithNamedLock(userId, COUPON_CODE);
+                    issueCouponUseCase.issueWithNamedLock(userId, COUPON_CODE);
                 } finally {
                     latch.countDown();
                 }
