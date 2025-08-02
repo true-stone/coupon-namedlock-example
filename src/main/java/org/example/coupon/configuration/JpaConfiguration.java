@@ -47,7 +47,7 @@ public class JpaConfiguration {
 
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource);
-        em.setPackagesToScan("org.example.namedlock.entity");
+        em.setPackagesToScan("org.example.coupon.entity");
         em.setJpaVendorAdapter(new HibernateJpaVendorAdapter());
         em.setJpaPropertyMap(properties);
         return em;
